@@ -7,9 +7,9 @@ export function startCron() {
     console.log("⏰ CRON : renouvellement des clés…")
     try {
       const airtel = await renewKey("AIRTEL_MONEY")
-      // const moov = await renewKey("MOOV_MONEY")
+      const moov = await renewKey("MOOV_MONEY")
       console.log("✅ PVit Airtel:", airtel.message)
-      // console.log("✅ PVit Moov:", moov.message)
+      console.log("✅ PVit Moov:", moov.message)
     } catch (err) {
       console.error("❌ Erreur CRON PVit:", err)
     }
